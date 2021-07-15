@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.0.1/css/unicons.css"/>
+    <link rel="stylesheet" href="./plugins/headline/headline.css">
+    <link rel="shortcut icon" href="./images/fvicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Jeralds.CV</title>
+    <span class="iconify" data-icon="uil-print" data-inline="false"></span>
+</head>
+<body>
+    <style>
+        @media print {
+            body *{
+                visibility: hidden;
+            }
+
+            .container, .container * {
+                visibility: visible;
+            }
+
+            .container{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+    
+    <nav>       
+        <div class="container inner">
+        <div class="logo"><i class="uil uil-cell"></i>
+            RESUME
+        </div>
+        <div><button onclick="window.print();"><i class="uil uil-print"></i>Print
+        </button></div></div>
+    </nav>
+
+    <main class="container">
+        <section class="profile" id="profile__ripple">
+            <div class="left">
+                <div class="avatar__block">
+                    <img src="./images/me.jpg" alt="">
+                    <span>
+                        <i class="uil uil-comment-dots"></i>
+                    </span>
+
+                </div>
+                <div>
+                    <h2>Jerald Fernandes</h2>
+                    <p class="cd-headline loading-bar">
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">Student</b>
+                            <b>Programmer</b>
+                            <b>Web Developer</b>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+                <ul class="contact">
+                    <li>
+                        <i class="uil uil-phone-volume"></i>
+                        <strong>Phone :</strong> 8095711530
+                    </li>
+                    <li>
+                        <i class="uil uil-envelope"></i>
+                        <strong>Email :</strong> jeraldfernandes7406@gmail.com
+                    </li>
+                </ul>
+                <ul class="socials">
+                    <li>
+                        <a href="https://m.facebook.com/100011838578811/" target="_blank">
+                            <i class="uil uil-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/jerald-fernandes-3147901b9" target="_blank">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Jer-ald" target="_blank">
+                            <i class="uil uil-github"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="about">
+            <h1 class="section__heading">About Me</h1>
+            <div class="content">
+                <div class="left">
+                    <h2>O B J E C T I V E</h2>
+                    <p>Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution  to the success of the company</p>
+                    <a href="completefile.pdf" download="">Download CV <span></span></a>
+                    <script>
+                        let button = document.querySelector("body div.content a");
+                        button.addEventListener("click",()=>{
+                            alert("success");
+                            const span= document.querySelector("body div.content a span");
+                            button.style.paddingRight = '10px';
+                            span.style.visibility = "visible";
+                            setTimeout(()=>{
+                                span.style.visibility="hidden";
+                                button.style.transition=".1s ease-in-out";
+                                button.style.paddingRight="0px";
+                            },3000);
+                    })
+                    </script>
+
+                </div>
+                <div class="right">
+                    <p>
+                        <span>Name</span>
+                        <span>Jerald Fernandes</span>
+                    </p>
+                    <p>
+                        <span>Date of birth</span>
+                        <span>02/03/2000</span>
+                    </p>
+                    <p>
+                        <span>Spoken Languages</span>
+                        <span>English,Hindi,Kannada</span>
+                    </p>
+                    <p>
+                        <span>Nationality</span>
+                        <span>India</span>
+                    </p>
+                    <p>
+                        <span>Intrest</span>
+                        <span>Music,Gardening,Travel,Sports,Art</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="skills">
+            <h1 class="section__heading">Education and Skills</h1>
+            <div class="content">
+                <div class="left">
+                    <div class="inner__left">
+                        <div class="heading">
+                            <i class="uil uil-print"></i>
+                            <h5>Education</h5>
+                        </div>
+                        <div class="timeline__wrapper">
+                            <div class="item">
+                                <p>2016</p>
+                                <p class="center">SSLC</p>
+                                <p>Anand Ashram High School, Bhatkal</p>
+                            </div>
+                            <div class="item">
+                                <p>2018</p>
+                                <p class="center">PUC</p>
+                                <p>Anand Ashram Composite PU College, Bhatkal</p>
+                            </div>
+                            <div class="item">
+                                <p>Present</p>
+                                <p class="center">VTU</p>
+                                <p>Canara Engineering College, Mangaluru</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner__right">
+                            <div class="heading">
+                                <i class="uil uil-suitcase-alt"></i>
+                                <h5>Technical Skills</h5>
+                            </div>
+                            <div class="timeline__wrapper">
+                                <div class="item">
+                                    <p>C Programming</p>
+                                    <p class="center"></p>
+                                    <p></p>
+                                </div>
+                                <div class="item">
+                                    <p>Python Programming</p>
+                                    <p class="center"></p>
+                                    <p></p>
+                                </div>
+                                <div class="item">
+                                    <p>JAVA Programming</p>
+                                    <p class="center"></p>
+                                    <p></p>
+                                </div>
+                                <div class="item">
+                                    <p>HTML,CSS</p>
+                                    <p class="center"></p>
+                                    <p></p>
+                                </div>
+                                <div class="item">
+                                    <p>JavaScript</p>
+                                    <p class="center"></p>
+                                    <p></p>
+                                </div>
+                                <div class="item">
+                                    <p>SQL</p>
+                                    <p class="center"></p>
+                                    <p></p>
+                                </div>
+
+                        </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+
+        </section>
+        <section class="work">
+            <h1 class="section__heading">My works</h1>
+            <div class="wrapper">
+                <div class="slider__wrapper">
+                    <div class="icon__wrap"><i class="uil uil-feedback"></i></div>
+                    <div class="slider">
+                        <div class="slide">
+                            <h2>P R O J E C T S
+                            </h2>
+                            <h5>1.AIRLINE RESERVATION SYSTEM
+                            </h5>
+                            <p>A Desktop Application made for airline company officials which is used for managing , <br> updating and reservation of flight tickets.</p>
+                            <p>Language used: JAVA Swing ,MYSQL.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="slide">
+                            <h2>W O R K S H O P S</h2>
+                            <p>Attended 1 day workshop on MATLAB organized by IIT Madras at NITK, Surathkal in February 2019.
+                            </p>
+                            <p>Attended 1 day workshop on Software Testing organized by CSI  at Canara Engineering College in  November 2019.
+                            </p>
+                            <p>Attended 9 day workshop on CAN Code: Basic Phase 1 organized by Qspiders Campus at Canara Engineering College in December 2018.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="slide">
+                            <h2>A C H I E V E M E N T S</h2>
+                            <p>Attained a Elite Certificate in the NPTEL course Introduction to Programming in C by IIT Kanpur. 
+                            </p>
+                            <p>Attained a certificate for completion of PERL Training, JAVA Training ,C Programming conducted by Spoken Tutorial Project, IIT Bombay.
+                            </p>
+                            <p>Attained a Microsoft AI Classroom series  certificate conducted by NASSCOM. 
+                            </p>
+                            <p>Attained a certificate for Machine Learning, JavaScript by Programming Hub. </p>
+                            <p>Attained a certificate for completion of Data structures in Python, Java programming  by Udemy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h1 class="section__heading">Contact me!</h1>
+            <div class="wrapper">
+                <div class="left">
+                    <div>
+                        <div>
+                            <i class="uil uil-phone-volume"></i>
+
+                        </div>
+                        <div>
+                            <h4>Free Call To Me:</h4>
+                            <span>8095711530</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="uil uil-envelope"></i>
+
+                        </div>
+                        <div>
+                            <h4>Mail Me:</h4>
+                            <span>jeraldfernandes7406@gmail.com</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <i class="uil uil-map-marker"></i>
+
+                        </div>
+                        <div>
+                            <h4>Find Me:</h4>
+                            <span>Murdeshwar, Bhatkal.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <form action="">
+                        <div class="form__group">
+                            <div>
+                                <label for="">Name</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">Email</label>
+                                <input type="email">
+                            </div>
+                        </div>
+                        <div class="form__group textarea__wrapper">
+                            <div>
+                                <label for="">Message</label>
+                                <textarea name="" id="" cols="30" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit">Submit now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <span>c 2021. All rights reserved</span>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./plugins/headline/headline.js"></script>
+    <script src="./plugins/ripples.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        let button = document.querySelector("body div.content a");
+        button.addEventListener("click",()=>{
+            /*alert("success");*/
+            const span= document.querySelector("body div.content a span");
+            button.style.paddingRight = '10px';
+            span.style.visibility = "visible";
+            setTimeout(()=>{
+                span.style.visibility="hidden";
+                button.style.transition=".1s ease-in-out";
+                button.style.paddingRight="0px";
+            },3000);
+    })
+    </script>
+</body>
+</html>
