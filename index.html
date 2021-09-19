@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,20 +97,39 @@
                     <h2>O B J E C T I V E</h2>
                     <p>Secure a responsible career opportunity to fully utilize my training and skills, while making a significant contribution  to the success of the company</p>
                     <a href="completefile.pdf" download="">Download CV <span></span></a>
-                    <script>
-                        let button = document.querySelector("body div.content a");
-                        button.addEventListener("click",()=>{
-                            alert("success");
-                            const span= document.querySelector("body div.content a span");
-                            button.style.paddingRight = '10px';
-                            span.style.visibility = "visible";
-                            setTimeout(()=>{
-                                span.style.visibility="hidden";
-                                button.style.transition=".1s ease-in-out";
-                                button.style.paddingRight="0px";
-                            },3000);
-                    })
-                    </script>
+                   
+                    <a type="button" value="Download CV" onclick="DownloadFile('Jeralds.CV.pdf')"></a>
+    <script type="text/javascript">
+      function DownloadFile(fileName) {
+          //Set the File URL.
+          var url = "Files/" + fileName;
+
+          //Create XMLHTTP Request.
+          var req = new XMLHttpRequest();
+          req.open("GET", url, true);
+          req.responseType = "blob";
+          req.onload = function () {
+              //Convert the Byte Data to BLOB object.
+              var blob = new Blob([req.response], { type: "application/octetstream" });
+
+              //Check the Browser type and download the File.
+              var isIE = false || !!document.documentMode;
+              if (isIE) {
+                  window.navigator.msSaveBlob(blob, fileName);
+              } else {
+                  var url = window.URL || window.webkitURL;
+                  link = url.createObjectURL(blob);
+                  var a = document.createElement("a");
+                  a.setAttribute("download", fileName);
+                  a.setAttribute("href", link);
+                  document.body.appendChild(a);
+                  a.click();
+                  document.body.removeChild(a);
+              }
+          };
+          req.send();
+      };
+  </script>
 
                 </div>
                 <div class="right">
